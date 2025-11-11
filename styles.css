@@ -1,0 +1,719 @@
+/* ========================================
+   ESTILOS GERAIS - PetShop Online
+   ======================================== */
+
+/* * Define as "variáveis" de design (tokens) para todo o site.
+ * Isso centraliza a paleta de cores, espaçamentos e fontes,
+ * facilitando a manutenção e a criação de um tema consistente.
+ */
+ :root {
+  /* Cores principais (marca) */
+  --color-primary: #ff6b6b;
+  --color-secondary: #4ecdc4;
+  --color-success: #95e1d3;
+  --color-danger: #ff6b6b;
+  --color-warning: #ffe66d;
+  --color-info: #a8d8ea;
+
+  /* Cores neutras (texto, fundos) */
+  --color-dark: #2c3e50;
+  --color-light: #ecf0f1;
+  --color-white: #ffffff;
+  --color-gray: #95a5a6;
+
+  /* Escala de espaçamento (baseado em rem) */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Tipografia */
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.5;
+}
+
+/* --- Reset e Estilos Base --- */
+
+/* * Reseta margens e paddings, e define 'border-box' globalmente.
+ * Isso torna o dimensionamento de elementos (width/height) mais intuitivo,
+ * pois o padding e a borda não aumentam o tamanho final.
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Habilita a rolagem suave para links âncora (ex: #servicos) */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+/* ========================================
+   COMPONENTE: Cabeçalho e Navegação
+   ======================================== */
+
+header#navbar {
+  background: linear-gradient(135deg, var(--color-white) 0%, #f8f9fa 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  /* * A 'transition' no 'box-shadow' não está aqui, mas no script.js.
+   * O script aumenta a sombra durante o scroll.
+   */
+}
+
+.navbar-brand {
+  color: var(--color-primary) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--color-secondary) !important;
+  transform: scale(1.05);
+}
+
+.nav-link {
+  color: var(--color-dark) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary) !important;
+}
+
+/* * Efeito "underline" que anima a partir da esquerda 
+ * no hover do link de navegação.
+ */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   SEÇÃO: Hero (Home)
+   ======================================== */
+
+.hero-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 0;
+}
+
+.hero-section h1 {
+  color: var(--color-dark);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  /* Animação de entrada definida abaixo */
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.hero-section p {
+  color: var(--color-gray);
+  font-size: 1.1rem;
+  /* Animação com delay de 0.2s, 'both' mantém o estado final */
+  animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.hero-section .btn {
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+/* Animação para o texto do Hero */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação para os botões do Hero */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   COMPONENTE: Botões
+   ======================================== */
+
+/* Estilo base para todos os botões */
+.btn {
+  border-radius: 50px; /* Estilo "pílula" */
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Variação: Botão Primário */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px); /* Efeito sutil de "levantar" */
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Variação: Botão Contornado */
+.btn-outline-primary {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+}
+
+/* Variação: Botão Sucesso */
+.btn-success {
+  background-color: var(--color-success);
+  color: var(--color-dark);
+}
+
+.btn-success:hover {
+  background-color: #7fd9c1;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(149, 225, 211, 0.3);
+}
+
+/* Variação: Botão Secundário (Cinza) */
+.btn-secondary {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   COMPONENTE: Cards
+   ======================================== */
+
+/* Estilo base para todos os cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Garante que a imagem não vaze no zoom */
+}
+
+/* Efeito de "levantar" e sombra mais forte no hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-header {
+  border: none;
+  font-weight: 600;
+}
+
+/* Card específico para Produtos */
+.product-card {
+  position: relative;
+}
+
+.product-card img {
+  transition: transform 0.3s ease;
+  height: 300px;
+  /* * 'object-fit: contain' garante que a imagem inteira apareça,
+   * sem distorção, dentro da altura definida (300px).
+   */
+  object-fit: contain;
+}
+
+/* Efeito de zoom na imagem do produto */
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Card específico para Serviços */
+.service-card {
+  background-color: var(--color-light);
+  /* Destaque visual na lateral esquerda */
+  border-left: 5px solid var(--color-primary);
+}
+
+/* ========================================
+   COMPONENTE: Carrossel (Bootstrap Custom)
+   ======================================== */
+
+.carousel {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  padding: 2rem 0; /* Espaçamento interno para os slides */
+}
+
+/* Customiza os indicadores (bolinhas) */
+.carousel-indicators button {
+  background-color: var(--color-gray);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.carousel-indicators button.active {
+  background-color: var(--color-primary);
+}
+
+/* Customiza as setas de controle */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--color-primary);
+  background-size: 1.5rem;
+  border-radius: 1.5rem;
+  padding: 1.3rem;
+}
+
+/* ========================================
+   Layout: Seções
+   ======================================== */
+
+/* Define o espaçamento padrão para todas as seções */
+section {
+  padding: 5rem 0;
+}
+
+/* * Estilo padrão para títulos de seção (H2).
+ * 'display: inline-block' permite que o '::after'
+ * tenha a largura exata do texto.
+ */
+section h2 {
+  color: var(--color-dark);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* * Cria uma linha de destaque (underline) com gradiente
+ * abaixo do título da seção.
+ */
+section h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  bottom: -15px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.bg-light {
+  background-color: var(--color-light) !important;
+}
+
+/* ========================================
+   COMPONENTE: Formulários
+   ======================================== */
+
+.form-label {
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo customizado para inputs e selects */
+.form-control,
+.form-select {
+  border: 2px solid var(--color-light);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+/* Estilo de foco customizado, usando a cor primária */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 107, 0.25);
+  outline: none;
+}
+
+/* Customização de checkboxes e radios */
+.form-check-input {
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0.3em;
+  border: 2px solid var(--color-light);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 107, 0.25);
+}
+
+.form-check-label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Agrupador de campos (fieldset) com borda tracejada */
+fieldset {
+  border: 2px dashed var(--color-light);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+legend {
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 0 1rem;
+}
+
+/* ========================================
+   COMPONENTE: Preços e Badges
+   ======================================== */
+
+.service-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.price-label {
+  font-weight: 600;
+  color: var(--color-gray);
+  font-size: 0.9rem;
+}
+
+.price-value {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-success);
+}
+
+/* Badge (etiqueta) */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.badge.bg-success {
+  background-color: var(--color-success) !important;
+  color: var(--color-dark);
+}
+
+/* ========================================
+   COMPONENTE: Acordeão (FAQ)
+   ======================================== */
+
+.accordion-button {
+  font-weight: 600;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  border: none;
+}
+
+/* Estilo do botão quando o item está "aberto" (não colapsado) */
+.accordion-button:not(.collapsed) {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.25rem rgba(255, 107, 107, 0.25);
+}
+
+.accordion-body {
+  background-color: var(--color-white);
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+/* ========================================
+   COMPONENTE: Alertas
+   ======================================== */
+
+.alert {
+  border: none;
+  border-radius: 10px;
+  border-left: 5px solid; /* A cor é definida pela classe .alert-info, etc. */
+}
+
+.alert-info {
+  background-color: #e8f4f8;
+  border-left-color: var(--color-info);
+  color: var(--color-dark);
+}
+
+.alert-danger {
+  background-color: #ffe8e8;
+  border-left-color: var(--color-danger);
+  color: var(--color-dark);
+}
+
+.alert-heading {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+/* ========================================
+   Layout: Rodapé
+   ======================================== */
+
+footer {
+  background: linear-gradient(135deg, var(--color-dark) 0%, #1a252f 100%);
+  margin-top: 5rem;
+  border-top: 3px solid var(--color-primary);
+}
+
+footer h5 {
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--color-primary);
+}
+
+/* Efeito nos ícones de redes sociais */
+footer .fab,
+footer .fas {
+  transition: all 0.3s ease;
+}
+
+footer a:hover .fab,
+footer a:hover .fas {
+  transform: translateY(-3px);
+  color: var(--color-primary);
+}
+
+/* ========================================
+   RESPONSIVIDADE (Mobile-first-ish)
+   ======================================== */
+
+/* Tablets (ex: iPads em retrato) */
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .hero-section .row {
+    min-height: auto; /* Remove a altura mínima no mobile */
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section img {
+    margin-top: 2rem; /* Adiciona espaço acima da imagem no mobile */
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-card img {
+    height: 200px; /* Diminui a altura da imagem do produto */
+  }
+
+  /* Remove o efeito "underline" do menu no mobile */
+  .nav-link::after {
+    display: none;
+  }
+
+  /* Faz o resumo do agendamento deixar de ser 'sticky' */
+  .sticky-top {
+    position: static !important;
+    margin-top: 2rem;
+  }
+}
+
+/* Smartphones (ex: iPhones) */
+@media (max-width: 576px) {
+  section {
+    padding: 2rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Reduz o padding dos inputs para caberem melhor */
+  .form-control,
+  .form-select {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  /* Ajusta o padding da 'Hero section' no mobile */
+  .ps-5 {
+    padding-left: 1rem !important;
+  }
+}
+
+/* ========================================
+   MELHORIAS DE ACESSIBILIDADE (A11y)
+   ======================================== */
+
+/* * Garante um indicador de foco claro e visível para
+ * usuários que navegam pelo teclado (ex: usando Tab).
+ */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* * Link "Pular para conteúdo"
+ * Fica escondido até receber foco (navegação por Tab).
+ */
+.skip-to-main {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 999;
+}
+
+.skip-to-main:focus {
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem;
+  z-index: 999;
+}
+
+/* * Media query para usuários que solicitam "Mais Contraste"
+ * no sistema operacional.
+ */
+@media (prefers-contrast: more) {
+  body {
+    color: var(--color-dark);
+  }
+
+  .btn-primary {
+    border: 2px solid var(--color-dark);
+  }
+}
+
+/* * Media query para usuários que solicitam "Redução de Movimento"
+ * no sistema operacional. Desliga animações e transições.
+ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto; /* Desliga a rolagem suave */
+  }
+}
+
+/* * Media query para "Modo Escuro" (Dark Mode)
+ * Detecta a preferência do sistema operacional.
+ */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  .form-control,
+  .form-select {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444;
+  }
+
+  .card {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+  }
+
+  .bg-light {
+    background-color: #333 !important;
+  }
+}
+
+/* * Classe utilitária usada nas imagens dos cards de produto
+ * para garantir que a imagem não seja cortada.
+ */
+.img {
+  object-fit: contain;
+}

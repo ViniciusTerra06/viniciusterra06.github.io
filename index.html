@@ -1,241 +1,1620 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetShop Online - Produtos e Serviços para seu Pet</title>
-</head>
-<body>
-    <!-- CABEÇALHO -->
-    <header>
-        <div>
-            <div>🐾 PetShop Online</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#acessorios">Acessórios</a></li>
-                    <li><a href="#racoes">Rações</a></li>
-                    <li><a href="#higiene">Higiene e Limpeza</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#promocoes">Promoções</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PetShop Online - Serviços de banho, tosa e produtos de qualidade para seu pet"
+    />
+    <meta name="keywords" content="petshop, banho, tosa, agendamento, pets" />
+
+    <title>🐾 PetShop Online - Banho, Tosa e Muito Mais!</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-main"
+      >Pular para conteúdo principal</a
+    >
+
+    <header
+      class="navbar navbar-expand-lg navbar-light sticky-top"
+      id="navbar"
+      role="banner"
+    >
+      <div class="container-fluid px-4">
+        <a
+          class="navbar-brand fw-bold fs-4"
+          href="#home"
+          aria-label="PetShop Online - Ir para a página inicial"
+        >
+          <i class="fas fa-paw" aria-hidden="true"></i> PetShop Online
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Abrir menu de navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <nav
+          class="collapse navbar-collapse"
+          id="navbarNav"
+          role="navigation"
+          aria-label="Menu principal"
+        >
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#home" aria-current="page">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#produtos">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicos">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#agendamento">Agendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cadastro">Cadastro</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
-    <!-- SEÇÃO ACESSÓRIOS -->
-    <section id="acessorios">
-        <h2>Acessórios para seu Pet</h2>
-        <div>Categoria: Acessórios</div>
-        <div>
-            <div>
-                <div>👕</div>
-                <h3>Camiseta Pet Confort</h3>
-                <p>Camiseta de algodão macio, disponível em diversos tamanhos e cores. Perfeita para passear com estilo.</p>
-                <p>R$ 35,90</p>
+    <main id="main-content" role="main">
+      <section id="home" class="hero-section" aria-labelledby="hero-title">
+        <div class="container-fluid">
+          <div class="row align-items-center min-vh-100">
+            <div
+              class="col-lg-6 d-flex flex-column justify-content-center ps-5"
+            >
+              <h1 id="hero-title" class="display-4 fw-bold mb-4">
+                Bem-vindo à PetShop Online
+              </h1>
+              <p class="lead mb-4">
+                Cuidando do seu pet com amor e dedicação. Banho, tosa, produtos
+                de qualidade e muito mais!
+              </p>
+              <div class="d-flex gap-3">
+                <a href="#agendamento" class="btn btn-primary btn-lg">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i> Agendar
+                  Serviço
+                </a>
+                <a href="#servicos" class="btn btn-outline-primary btn-lg">
+                  <i class="fas fa-info-circle" aria-hidden="true"></i> Saiba
+                  Mais
+                </a>
+              </div>
             </div>
-
-            <div>
-                <div>🧸</div>
-                <h3>Brinquedo Mordedor</h3>
-                <p>Mordedor resistente de borracha natural, ideal para cães de todos os portes. Ajuda na saúde dental.</p>
-                <p>R$ 24,90</p>
+            <div class="col-lg-6 text-center">
+              <img
+                src="/images/imagemCachorro_Telaprincipal.jpg"
+                alt="Cachorro feliz recebendo banho profissional em ambiente acolhedor"
+                class="img-fluid rounded-5 shadow-lg"
+                loading="lazy"
+              />
             </div>
+          </div>
         </div>
-    </section>
+      </section>
+      <section id="produtos" class="py-5" aria-labelledby="produtos-title">
+        <div class="container">
+          <h2 id="produtos-title" class="text-center mb-5 fw-bold">
+            <i class="fas fa-shopping-bag" aria-hidden="true"></i> Nossos
+            Produtos em Destaque
+          </h2>
 
-    <!-- SEÇÃO RAÇÕES -->
-    <section id="racoes">
-        <h2>Rações de Qualidade</h2>
-        <div>Categoria: Rações Não Perecíveis</div>
-        <div>
-            <div>
-                <div>🦴</div>
-                <h3>Ração Premium Cães Adultos</h3>
-                <p>Ração completa para cães adultos de porte médio. Rico em proteínas e vitaminas. Pacote de 15kg.</p>
-                <p>R$ 129,90</p>
+          <div
+            id="produtosCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            role="region"
+            aria-label="Carrossel de produtos em destaque"
+            aria-roledescription="carrossel"
+          >
+            <div class="carousel-indicators" role="tablist">
+              <button
+                type="button"
+                data-bs-target="#produtosCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1 - Acessórios para pets"
+                role="tab"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#produtosCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2 - Rações premium"
+                role="tab"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#produtosCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3 - Produtos de higiene"
+                role="tab"
+              ></button>
             </div>
 
-            <div>
-                <div>🐱</div>
-                <h3>Ração Premium Gatos</h3>
-                <p>Ração especial para gatos adultos, sabor salmão. Auxilia no controle de bolas de pelo. Pacote de 10kg.</p>
-                <p>R$ 149,90</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO HIGIENE E LIMPEZA -->
-    <section id="higiene">
-        <h2>Higiene e Limpeza</h2>
-        <div>Categoria: Higiene e Limpeza</div>
-        <div>
-            <div>
-                <div>📋</div>
-                <h3>Tapete Higiênico 80x60cm</h3>
-                <p>Tapete higiênico super absorvente com 30 unidades. Controle de odores e gel neutralizador.</p>
-                <p>R$ 45,90</p>
-            </div>
-
-            <div>
-                <div>🩲</div>
-                <h3>Fraldas Descartáveis M</h3>
-                <p>Fraldas descartáveis tamanho M para cães. Pacote com 12 unidades. Ajuste confortável e seguro.</p>
-                <p>R$ 38,90</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO SERVIÇOS -->
-    <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <div>
-            <div>
-                <h3>🛁 Banho e Tosa Completo</h3>
-                <div>
-                    <p>Banho completo com produtos de qualidade, tosa higiênica ou completa, corte de unhas, limpeza de ouvidos e perfumação.</p>
+            <div class="carousel-inner">
+              <div
+                class="carousel-item active"
+                role="tabpanel"
+                aria-label="Acessórios para pets"
+              >
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <article class="card h-100 shadow-sm product-card">
+                      <img
+                        src="/images/roupaPet.jpg"
+                        alt="Camiseta confortável para cães em várias cores disponíveis"
+                        class="img"
+                        loading="lazy"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title h5">
+                          <i class="fas fa-shirt" aria-hidden="true"></i>
+                          Camiseta Pet Confort
+                        </h3>
+                        <p class="card-text">
+                          Camiseta de algodão macio, disponível em diversos
+                          tamanhos e cores. Perfeita para passear com estilo.
+                        </p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <span
+                            class="badge bg-success"
+                            aria-label="Preço: 35 reais e 90 centavos"
+                            >R$ 35,90</span
+                          >
+                          <button
+                            class="btn btn-sm btn-primary"
+                            aria-label="Adicionar Camiseta Pet Confort ao carrinho"
+                          >
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <article class="card h-100 shadow-sm product-card">
+                      <img
+                        src="/images/brinquedoMordedor.jfif"
+                        alt="Brinquedo mordedor resistente de borracha natural para cães"
+                        class="card-img-top"
+                        loading="lazy"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title h5">
+                          <i class="fas fa-bone" aria-hidden="true"></i>
+                          Brinquedo Mordedor
+                        </h3>
+                        <p class="card-text">
+                          Mordedor resistente de borracha natural, ideal para
+                          cães de todos os portes. Ajuda na saúde dental.
+                        </p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <span
+                            class="badge bg-success"
+                            aria-label="Preço: 24 reais e 90 centavos"
+                            >R$ 24,90</span
+                          >
+                          <button
+                            class="btn btn-sm btn-primary"
+                            aria-label="Adicionar Brinquedo Mordedor ao carrinho"
+                          >
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
                 </div>
-                <p>R$ 80,00</p>
-                <div>✅ Disponível com tele-busca: +R$ 20,00</div>
-            </div>
+              </div>
 
-            <div>
-                <h3>🚿 Banho Simples</h3>
-                <div>
-                    <p>Banho relaxante com shampoo e condicionador premium, secagem completa e escovação. Ideal para manutenção regular.</p>
+              <div
+                class="carousel-item"
+                role="tabpanel"
+                aria-label="Rações premium"
+              >
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <article class="card h-100 shadow-sm product-card">
+                      <img
+                        src="/images/racaoPremiumcaes.jpg"
+                        alt="Ração premium de 15 quilogramas para cães adultos de porte médio"
+                        class="card-img-top"
+                        loading="lazy"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title h5">
+                          <i
+                            class="fas fa-drumstick-bite"
+                            aria-hidden="true"
+                          ></i>
+                          Ração Premium Cães
+                        </h3>
+                        <p class="card-text">
+                          Ração completa para cães adultos de porte médio. Rico
+                          em proteínas e vitaminas. Pacote de 15kg.
+                        </p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <span
+                            class="badge bg-success"
+                            aria-label="Preço: 129 reais e 90 centavos"
+                            >R$ 129,90</span
+                          >
+                          <button
+                            class="btn btn-sm btn-primary"
+                            aria-label="Adicionar Ração Premium Cães ao carrinho"
+                          >
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <article class="card h-100 shadow-sm product-card">
+                      <img
+                        src="/images/racaoPremiumgatos.jpg"
+                        alt="Ração premium de 10 quilogramas para gatos com sabor salmão"
+                        class="card-img-top"
+                        loading="lazy"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title h5">
+                          <i class="fas fa-cat" aria-hidden="true"></i> Ração
+                          Premium Gatos
+                        </h3>
+                        <p class="card-text">
+                          Ração especial para gatos adultos, sabor salmão.
+                          Auxilia no controle de bolas de pelo. Pacote de 10kg.
+                        </p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <span
+                            class="badge bg-success"
+                            aria-label="Preço: 149 reais e 90 centavos"
+                            >R$ 149,90</span
+                          >
+                          <button
+                            class="btn btn-sm btn-primary"
+                            aria-label="Adicionar Ração Premium Gatos ao carrinho"
+                          >
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
                 </div>
-                <p>R$ 50,00</p>
-                <div>✅ Disponível com tele-busca: +R$ 20,00</div>
-            </div>
-        </div>
-        <p>
-            <strong>Tele-busca:</strong> Buscamos e entregamos seu pet no conforto da sua casa!
-        </p>
-    </section>
+              </div>
 
-    <!-- SEÇÃO PROMOÇÕES E VENDAS -->
-    <section id="promocoes">
-        <h2>Promoções e Ofertas Especiais</h2>
-        
-        <div>
-            <h3>🎉 Primeira Compra</h3>
-            <p>Ganhe <strong>15% OFF</strong> na sua primeira compra!</p>
-            <p>Use o cupom: <strong>BEMVINDO15</strong></p>
-        </div>
-
-        <div>
-            <div>
-                <div>🚚 FRETE GRÁTIS</div>
-                <h3>Compras acima de R$ 150,00</h3>
-                <p>Aproveite frete grátis para todo o Brasil em compras acima de R$ 150,00. Válido para todos os produtos do site!</p>
-            </div>
-
-            <div>
-                <div>💳 FORMAS DE PAGAMENTO</div>
-                <h3>Parcele sem juros</h3>
-                <p>Aceitamos PIX (5% de desconto), cartão de crédito em até 3x sem juros, cartão de débito e boleto bancário.</p>
-            </div>
-
-            <div>
-                <div>📧 NEWSLETTER</div>
-                <h3>Ofertas Personalizadas</h3>
-                <p>Cadastre seu e-mail e receba ofertas exclusivas, lançamentos e dicas de cuidados para seu pet direto na sua caixa de entrada!</p>
-            </div>
-        </div>
-
-        <div>
-            <h3>📬 Receba Ofertas Exclusivas</h3>
-            <p>Inscreva-se na nossa newsletter e ganhe 10% OFF na próxima compra!</p>
-            <div>
-                <input type="email" placeholder="Seu melhor e-mail">
-                <button>Cadastrar</button>
-            </div>
-        </div>
-
-        <div>
-            <h3>🛒 Processo de Compra Simplificado</h3>
-            <div>
-                <div>
-                    <div>1️⃣</div>
-                    <h4>Escolha</h4>
-                    <p>Selecione seus produtos favoritos</p>
+              <div
+                class="carousel-item"
+                role="tabpanel"
+                aria-label="Produtos de higiene"
+              >
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <article class="card h-100 shadow-sm product-card">
+                      <img
+                        src="/images/tapeteHigienico.jpg"
+                        alt="Tapete higiênico super absorvente com 30 unidades para treinamento de cães"
+                        class="card-img-top"
+                        loading="lazy"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title h5">
+                          <i class="fas fa-square" aria-hidden="true"></i>
+                          Tapete Higiênico
+                        </h3>
+                        <p class="card-text">
+                          Tapete higiênico super absorvente com 30 unidades.
+                          Controle de odores e gel neutralizador.
+                        </p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <span
+                            class="badge bg-success"
+                            aria-label="Preço: 45 reais e 90 centavos"
+                            >R$ 45,90</span
+                          >
+                          <button
+                            class="btn btn-sm btn-primary"
+                            aria-label="Adicionar Tapete Higiênico ao carrinho"
+                          >
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <article class="card h-100 shadow-sm product-card">
+                      <img
+                        src="/images/fraldaparaCaes.jpg"
+                        alt="Fraldas descartáveis tamanho médio para cães, pacote com 12 unidades"
+                        class="card-img-top"
+                        loading="lazy"
+                      />
+                      <div class="card-body">
+                        <h3 class="card-title h5">
+                          <i class="fas fa-diaper" aria-hidden="true"></i>
+                          Fraldas Descartáveis
+                        </h3>
+                        <p class="card-text">
+                          Fraldas descartáveis tamanho M para cães. Pacote com
+                          12 unidades. Ajuste confortável e seguro.
+                        </p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <span
+                            class="badge bg-success"
+                            aria-label="Preço: 38 reais e 90 centavos"
+                            >R$ 38,90</span
+                          >
+                          <button
+                            class="btn btn-sm btn-primary"
+                            aria-label="Adicionar Fraldas Descartáveis ao carrinho"
+                          >
+                            <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
                 </div>
-                <div>
-                    <div>2️⃣</div>
-                    <h4>Adicione</h4>
-                    <p>Coloque no carrinho</p>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#produtosCarousel"
+              data-bs-slide="prev"
+              aria-label="Ir para slide anterior"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#produtosCarousel"
+              data-bs-slide="next"
+              aria-label="Ir para próximo slide"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+          </div>
+      </section>
+      <section
+        id="servicos"
+        class="py-5 bg-light"
+        aria-labelledby="servicos-title"
+      >
+        <div class="container">
+          <h2 id="servicos-title" class="text-center mb-5 fw-bold">
+            <i class="fas fa-spa" aria-hidden="true"></i> Nossos Serviços
+          </h2>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <article class="card h-100 shadow service-card">
+                <div class="card-body">
+                  <h3 class="card-title h4">
+                    <i class="fas fa-bath" aria-hidden="true"></i> Banho e Tosa
+                    Completo
+                  </h3>
+                  <p class="card-text">
+                    Banho completo com produtos de qualidade, tosa higiênica ou
+                    completa, corte de unhas, limpeza de ouvidos e perfumação.
+                  </p>
+                  <div class="service-pricing">
+                    <span class="price-label">Valor do Serviço:</span>
+                    <span class="price-value" aria-label="80 reais"
+                      >R$ 80,00</span
+                    >
+                  </div>
+                  <div class="service-pricing mt-2">
+                    <span class="price-label">Tele-busca (adicional):</span>
+                    <span class="price-value" aria-label="20 reais"
+                      >R$ 20,00</span
+                    >
+                  </div>
+                  <p class="mt-3 text-muted small">
+                    ✓ Inclui higienização completa e acabamento premium
+                  </p>
                 </div>
-                <div>
-                    <div>3️⃣</div>
-                    <h4>Finalize</h4>
-                    <p>Pagamento rápido e seguro</p>
+              </article>
+            </div>
+
+            <div class="col-md-6">
+              <article class="card h-100 shadow service-card">
+                <div class="card-body">
+                  <h3 class="card-title h4">
+                    <i class="fas fa-shower" aria-hidden="true"></i> Banho
+                    Simples
+                  </h3>
+                  <p class="card-text">
+                    Banho relaxante com shampoo e condicionador premium, secagem
+                    completa e escovação. Ideal para manutenção regular.
+                  </p>
+                  <div class="service-pricing">
+                    <span class="price-label">Valor do Serviço:</span>
+                    <span class="price-value" aria-label="50 reais"
+                      >R$ 50,00</span
+                    >
+                  </div>
+                  <div class="service-pricing mt-2">
+                    <span class="price-label">Tele-busca (adicional):</span>
+                    <span class="price-value" aria-label="20 reais"
+                      >R$ 20,00</span
+                    >
+                  </div>
+                  <p class="mt-3 text-muted small">
+                    ✓ Ideal para limpeza e manutenção regular
+                  </p>
                 </div>
+              </article>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- SEÇÃO FAQ -->
-    <section id="faq">
-        <h2>Perguntas Frequentes</h2>
-        <div>
-            <div>
-                <h3>Como funciona o sistema de tele-busca?</h3>
-                <p>Agendamos um horário para buscar seu pet em casa, realizamos o serviço e devolvemos no mesmo dia. O valor adicional de R$ 20,00 cobre ida e volta.</p>
-            </div>
-
-            <div>
-                <h3>Quais formas de pagamento são aceitas?</h3>
-                <p>Aceitamos PIX, cartão de crédito, cartão de débito e boleto bancário. Para compras acima de R$ 150,00, oferecemos frete grátis.</p>
-            </div>
-
-            <div>
-                <h3>Como faço para agendar banho e tosa?</h3>
-                <p>Entre em contato através do WhatsApp ou e-mail. Nossa equipe confirmará o melhor horário disponível para você.</p>
-            </div>
-
-            <div>
-                <h3>Qual o prazo de entrega dos produtos?</h3>
-                <p>O prazo varia conforme sua localização: até 24h para região metropolitana, 48h para interior e até 72h para regiões mais distantes.</p>
-            </div>
-
-            <div>
-                <h3>Posso trocar ou devolver produtos?</h3>
-                <p>Sim! Você tem até 7 dias para trocar ou devolver produtos, desde que estejam na embalagem original e sem uso.</p>
-            </div>
-
-            <div>
-                <h3>📞 Suporte ao Cliente</h3>
-                <p><strong>WhatsApp:</strong> (51) 99999-9999</p>
-                <p><strong>E-mail:</strong> contato@petshoponline.com.br</p>
-                <p><strong>Horário:</strong> Segunda a Sábado, 8h às 18h</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- RODAPÉ -->
-    <footer>
-        <div>
-            <p><strong>🐾 PetShop Online</strong></p>
-            <p>Cuidando do seu pet com amor e dedicação</p>
-            
-            <div>
-                <a href="#acessorios">Acessórios</a>
-                <a href="#racoes">Rações</a>
-                <a href="#higiene">Higiene</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#promocoes">Promoções</a>
-                <a href="#faq">FAQ</a>
-            </div>
-
-            <p>📍 Gravataí, Rio Grande do Sul, BR</p>
-            <p>📧 contato@petshoponline.com.br | 📱 (51) 99999-9999</p>
-            
+          <div class="alert alert-info mt-5" role="alert">
+            <h4 class="alert-heading">
+              <i class="fas fa-truck" aria-hidden="true"></i> Tele-busca e
+              Entrega
+            </h4>
             <p>
-                © 2025 PetShop Online. Todos os direitos reservados.<br>
-                CNPJ: 00.000.000/0001-00
+              Buscamos e entregamos seu pet no conforto da sua casa! O serviço
+              de tele-busca tem um custo adicional de R$ 20,00 e inclui busca e
+              entrega no mesmo dia.
             </p>
+          </div>
         </div>
+      </section>
+      <section
+        id="agendamento"
+        class="py-5"
+        aria-labelledby="agendamento-title"
+      >
+        <div class="container">
+          <h2 id="agendamento-title" class="text-center mb-5 fw-bold">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i> Sistema de
+            Agendamento
+          </h2>
+
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                  <h3 class="mb-0 h4">
+                    <i class="fas fa-edit" aria-hidden="true"></i> Agende seu
+                    Serviço
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <form
+                    id="agendamentoForm"
+                    onsubmit="handleAgendamento(event)"
+                    novalidate
+                  >
+                    <fieldset class="mb-4">
+                      <legend class="h5 mb-3">
+                        <i class="fas fa-paw" aria-hidden="true"></i> Dados do
+                        Pet
+                      </legend>
+
+                      <div class="mb-3">
+                        <label for="nomePet" class="form-label"
+                          >Nome do Pet
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nomePet"
+                          name="nomePet"
+                          placeholder="Ex: Fluffy"
+                          required
+                          aria-required="true"
+                          aria-describedby="nomePetHelp"
+                        />
+                        <small id="nomePetHelp" class="form-text text-muted"
+                          >Campo obrigatório</small
+                        >
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="racaPet" class="form-label"
+                            >Raça
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="racaPet"
+                            name="racaPet"
+                            placeholder="Ex: Poodle"
+                            required
+                            aria-required="true"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="idadePet" class="form-label"
+                            >Idade em anos
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="idadePet"
+                            name="idadePet"
+                            min="0"
+                            max="50"
+                            placeholder="Ex: 3"
+                            required
+                            aria-required="true"
+                            aria-describedby="idadePetHelp"
+                          />
+                          <small id="idadePetHelp" class="form-text text-muted"
+                            >Idade entre 0 e 50 anos</small
+                          >
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="tipoPet" class="form-label"
+                          >Tipo de Pet
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></label
+                        >
+                        <select
+                          class="form-select"
+                          id="tipoPet"
+                          name="tipoPet"
+                          required
+                          aria-required="true"
+                        >
+                          <option value="">-- Selecione --</option>
+                          <option value="cachorro">Cachorro</option>
+                          <option value="gato">Gato</option>
+                          <option value="outro">Outro</option>
+                        </select>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="mb-4">
+                      <legend class="h5 mb-3">
+                        <i class="fas fa-spa" aria-hidden="true"></i> Escolha do
+                        Serviço
+                      </legend>
+
+                      <div
+                        class="mb-3"
+                        role="group"
+                        aria-labelledby="tipoServicoLabel"
+                      >
+                        <span id="tipoServicoLabel" class="form-label d-block"
+                          >Tipo de Serviço
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></span
+                        >
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="tipoServico"
+                            id="servoBanhoTosa"
+                            value="banho-tosa"
+                            required
+                            aria-required="true"
+                          />
+                          <label class="form-check-label" for="servoBanhoTosa">
+                            Banho e Tosa Completo (R$ 80,00)
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="tipoServico"
+                            id="servoBanho"
+                            value="banho"
+                            required
+                            aria-required="true"
+                          />
+                          <label class="form-check-label" for="servoBanho">
+                            Banho Simples (R$ 50,00)
+                          </label>
+                        </div>
+                      </div>
+
+                      <div
+                        class="mb-3"
+                        role="group"
+                        aria-labelledby="metodoEntregaLabel"
+                      >
+                        <span id="metodoEntregaLabel" class="form-label d-block"
+                          >Método de Entrega
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></span
+                        >
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="metodoEntrega"
+                            id="entregaLocal"
+                            value="local"
+                            required
+                            aria-required="true"
+                          />
+                          <label class="form-check-label" for="entregaLocal">
+                            Entrega no Local (sem custo adicional)
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="metodoEntrega"
+                            id="entregaTelebusca"
+                            value="telebusca"
+                            required
+                            aria-required="true"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="entregaTelebusca"
+                          >
+                            Tele-busca e Entrega (+R$ 20,00)
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="mb-4">
+                      <legend class="h5 mb-3">
+                        <i class="fas fa-clock" aria-hidden="true"></i> Data e
+                        Horário
+                      </legend>
+
+                      <div class="mb-3">
+                        <label for="dataAgendamento" class="form-label"
+                          >Selecione a Data
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="dataAgendamento"
+                          name="dataAgendamento"
+                          required
+                          aria-required="true"
+                          aria-describedby="dataAgendamentoHelp"
+                          min=""
+                        />
+                        <small
+                          id="dataAgendamentoHelp"
+                          class="form-text text-muted"
+                          >Disponível até 60 dias a partir de hoje</small
+                        >
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="horarioAgendamento" class="form-label"
+                          >Selecione o Horário
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></label
+                        >
+                        <select
+                          class="form-select"
+                          id="horarioAgendamento"
+                          name="horarioAgendamento"
+                          required
+                          aria-required="true"
+                        >
+                          <option value="">-- Selecione --</option>
+                          <option value="08:00">08:00</option>
+                          <option value="09:00">09:00</option>
+                          <option value="10:00">10:00</option>
+                          <option value="11:00">11:00</option>
+                          <option value="14:00">14:00</option>
+                          <option value="15:00">15:00</option>
+                          <option value="16:00">16:00</option>
+                          <option value="17:00">17:00</option>
+                        </select>
+                      </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-success w-100 btn-lg">
+                      <i class="fas fa-check-circle" aria-hidden="true"></i>
+                      Confirmar Agendamento
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="card shadow" style="top: 80px">
+                <div class="card-header bg-success text-white">
+                  <h3 class="mb-0 h4">
+                    <i class="fas fa-receipt" aria-hidden="true"></i> Resumo do
+                    Agendamento
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <div
+                    id="resumoAgendamento"
+                    role="region"
+                    aria-live="polite"
+                    aria-atomic="true"
+                  >
+                    <p class="text-muted text-center">
+                      Preencha o formulário para ver o resumo
+                    </p>
+                  </div>
+
+                  <hr />
+
+                  <div class="alert alert-info">
+                    <h4 class="alert-heading h6">
+                      <i class="fas fa-phone" aria-hidden="true"></i> Dúvidas?
+                    </h4>
+                    <p class="mb-2">Entre em contato conosco:</p>
+                    <p class="mb-1">
+                      <strong>WhatsApp:</strong>
+                      <a
+                        href="https://wa.me/5551999999999"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Falar conosco no WhatsApp"
+                      >
+                        (51) 99999-9999
+                      </a>
+                    </p>
+                    <p class="mb-0">
+                      <strong>E-mail:</strong>
+                      <a href="mailto:contato@petshoponline.com.br">
+                        contato@petshoponline.com.br
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="cadastro"
+        class="py-5 bg-light"
+        aria-labelledby="cadastro-title"
+      >
+        <div class="container">
+          <h2 id="cadastro-title" class="text-center mb-5 fw-bold">
+            <i class="fas fa-user-plus" aria-hidden="true"></i> Cadastre-se no
+            Sistema
+          </h2>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="card shadow">
+                <div class="card-header bg-info text-white">
+                  <h3 class="mb-0 h4">
+                    <i class="fas fa-form" aria-hidden="true"></i> Formulário de
+                    Cadastro
+                  </h3>
+                </div>
+                <div class="card-body">
+                  <form
+                    id="cadastroForm"
+                    onsubmit="handleCadastro(event)"
+                    novalidate
+                  >
+                    <fieldset class="mb-5">
+                      <legend class="h5 mb-4">
+                        <i class="fas fa-user" aria-hidden="true"></i> Dados
+                        Pessoais
+                      </legend>
+
+                      <div class="mb-3">
+                        <label for="nomeCliente" class="form-label"
+                          >Nome Completo
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nomeCliente"
+                          name="nomeCliente"
+                          placeholder="Ex: João Silva"
+                          required
+                          aria-required="true"
+                          minlength="5"
+                          maxlength="100"
+                          aria-describedby="nomeClienteHelp"
+                        />
+                        <small id="nomeClienteHelp" class="form-text text-muted"
+                          >Mínimo 5 caracteres</small
+                        >
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="cpfCliente" class="form-label"
+                            >CPF
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cpfCliente"
+                            name="cpfCliente"
+                            placeholder="000.000.000-00"
+                            required
+                            aria-required="true"
+                            maxlength="14"
+                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                            aria-describedby="cpfClienteHelp"
+                          />
+                          <small
+                            id="cpfClienteHelp"
+                            class="form-text text-muted"
+                            >A máscara é aplicada via JS</small
+                          >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="dataNascimento" class="form-label"
+                            >Data de Nascimento
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="dataNascimento"
+                            name="dataNascimento"
+                            required
+                            aria-required="true"
+                          />
+                        </div>
+                      </div>
+
+                      <div
+                        class="mb-3"
+                        role="group"
+                        aria-labelledby="sexoLabel"
+                      >
+                        <span id="sexoLabel" class="form-label"
+                          >Sexo
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></span
+                        >
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="sexo"
+                            id="sexoMasculino"
+                            value="masculino"
+                            required
+                            aria-required="true"
+                          />
+                          <label class="form-check-label" for="sexoMasculino">
+                            Masculino
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="sexo"
+                            id="sexoFeminino"
+                            value="feminino"
+                            required
+                            aria-required="true"
+                          />
+                          <label class="form-check-label" for="sexoFeminino">
+                            Feminino
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="sexo"
+                            id="sexoOutro"
+                            value="outro"
+                            required
+                            aria-required="true"
+                          />
+                          <label class="form-check-label" for="sexoOutro">
+                            Outro
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="mb-5">
+                      <legend class="h5 mb-4">
+                        <i class="fas fa-address-card" aria-hidden="true"></i>
+                        Dados de Contato
+                      </legend>
+
+                      <div class="mb-3">
+                        <label for="emailCliente" class="form-label"
+                          >E-mail
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="emailCliente"
+                          name="emailCliente"
+                          placeholder="seu.email@exemplo.com"
+                          required
+                          aria-required="true"
+                          aria-describedby="emailClienteHelp"
+                        />
+                        <small
+                          id="emailClienteHelp"
+                          class="form-text text-muted"
+                          >Formato: email@exemplo.com</small
+                        >
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="telefoneCliente" class="form-label"
+                            >Telefone
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="tel"
+                            class="form-control"
+                            id="telefoneCliente"
+                            name="telefoneCliente"
+                            placeholder="(51) 98888-8888"
+                            required
+                            aria-required="true"
+                            pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                            aria-describedby="telefoneClienteHelp"
+                          />
+                          <small
+                            id="telefoneClienteHelp"
+                            class="form-text text-muted"
+                            >A máscara é aplicada via JS</small
+                          >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="cepCliente" class="form-label"
+                            >CEP
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cepCliente"
+                            name="cepCliente"
+                            placeholder="00000-000"
+                            required
+                            aria-required="true"
+                            maxlength="9"
+                            pattern="\d{5}-\d{3}"
+                            aria-describedby="cepClienteHelp"
+                          />
+                          <small
+                            id="cepClienteHelp"
+                            class="form-text text-muted"
+                            >A máscara é aplicada via JS</small
+                          >
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="enderecoCliente" class="form-label"
+                          >Endereço Completo
+                          <span class="text-danger" aria-label="obrigatório"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="enderecoCliente"
+                          name="enderecoCliente"
+                          placeholder="Rua/Avenida, número, bairro, cidade, estado"
+                          required
+                          aria-required="true"
+                          minlength="10"
+                          aria-describedby="enderecoClienteHelp"
+                        />
+                        <small
+                          id="enderecoClienteHelp"
+                          class="form-text text-muted"
+                          >Endereço completo com rua, número e bairro</small
+                        >
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="mb-4">
+                      <legend class="h5 mb-4">
+                        <i class="fas fa-paw" aria-hidden="true"></i> Dados do
+                        Pet
+                      </legend>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="nomePetCadastro" class="form-label"
+                            >Nome do Pet
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="nomePetCadastro"
+                            name="nomePetCadastro"
+                            placeholder="Ex: Rex"
+                            required
+                            aria-required="true"
+                            maxlength="50"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="racaPetCadastro" class="form-label"
+                            >Raça
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="racaPetCadastro"
+                            name="racaPetCadastro"
+                            placeholder="Ex: Labrador"
+                            required
+                            aria-required="true"
+                            maxlength="50"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-4 mb-3">
+                          <label for="idadePetCadastro" class="form-label"
+                            >Idade (anos)
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="idadePetCadastro"
+                            name="idadePetCadastro"
+                            min="0"
+                            max="50"
+                            required
+                            aria-required="true"
+                            aria-describedby="idadePetCadastroHelp"
+                          />
+                          <small
+                            id="idadePetCadastroHelp"
+                            class="form-text text-muted"
+                            >Entre 0 e 50 anos</small
+                          >
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label for="pesoPet" class="form-label"
+                            >Peso (kg)
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="pesoPet"
+                            name="pesoPet"
+                            min="0"
+                            max="200"
+                            step="0.1"
+                            placeholder="Ex: 25.5"
+                            required
+                            aria-required="true"
+                            aria-describedby="pesoPetHelp"
+                          />
+                          <small id="pesoPetHelp" class="form-text text-muted"
+                            >Em quilogramas</small
+                          >
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label for="tipoPetCadastro" class="form-label"
+                            >Tipo
+                            <span class="text-danger" aria-label="obrigatório"
+                              >*</span
+                            ></label
+                          >
+                          <select
+                            class="form-select"
+                            id="tipoPetCadastro"
+                            name="tipoPetCadastro"
+                            required
+                            aria-required="true"
+                          >
+                            <option value="">-- Selecione --</option>
+                            <option value="cachorro">Cachorro</option>
+                            <option value="gato">Gato</option>
+                            <option value="coelho">Coelho</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="outro">Outro</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="observacoesPet" class="form-label"
+                          >Observações Especiais</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="observacoesPet"
+                          name="observacoesPet"
+                          placeholder="Alergias, comportamentos especiais, etc."
+                          rows="3"
+                          maxlength="500"
+                          aria-describedby="observacoesPetHelp"
+                        ></textarea>
+                        <small
+                          id="observacoesPetHelp"
+                          class="form-text text-muted"
+                          >Máximo 500 caracteres - Informe alergias ou cuidados
+                          especiais</small
+                        >
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="permissaoContato"
+                          name="permissaoContato"
+                        />
+                        <label class="form-check-label" for="permissaoContato">
+                          Autorizo contato via WhatsApp para promoções e dicas
+                        </label>
+                      </div>
+                    </fieldset>
+
+                    <div class="d-flex gap-2">
+                      <button
+                        type="submit"
+                        class="btn btn-primary w-100 btn-lg"
+                      >
+                        <i class="fas fa-save" aria-hidden="true"></i> Salvar
+                        Cadastro
+                      </button>
+                      <button
+                        type="reset"
+                        class="btn btn-secondary btn-lg"
+                        style="width: 120px"
+                        aria-label="Limpar todos os campos do formulário"
+                      >
+                        <i class="fas fa-redo" aria-hidden="true"></i> Limpar
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="faq" class="py-5" aria-labelledby="faq-title">
+        <div class="container">
+          <h2 id="faq-title" class="text-center mb-5 fw-bold">
+            <i class="fas fa-question-circle" aria-hidden="true"></i> Perguntas
+            Frequentes
+          </h2>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div
+                class="accordion"
+                id="faqAccordion"
+                role="region"
+                aria-label="Perguntas frequentes"
+              >
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1"
+                      aria-expanded="true"
+                      aria-controls="faq1"
+                    >
+                      Como funciona o sistema de tele-busca?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Agendamos um horário para buscar seu pet em casa,
+                      realizamos o serviço em nossa loja e devolvemos no mesmo
+                      dia. O valor adicional de R$ 20,00 cobre ida e volta. Você
+                      receberá atualizações por WhatsApp sobre o andamento do
+                      processo.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2"
+                      aria-expanded="false"
+                      aria-controls="faq2"
+                    >
+                      Quais formas de pagamento são aceitas?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Aceitamos PIX, cartão de crédito (em até 3x sem juros),
+                      cartão de débito e boleto bancário. Para pagamentos em
+                      PIX, oferecemos 5% de desconto no valor total.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3"
+                      aria-expanded="false"
+                      aria-controls="faq3"
+                    >
+                      Como faço para agendar banho e tosa?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Você pode agendar diretamente no formulário de agendamento
+                      desta página, selecionando a data, horário e tipo de
+                      serviço desejado. Você também pode entrar em contato via
+                      WhatsApp ou e-mail, e nossa equipe confirmará o melhor
+                      horário disponível.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq4"
+                      aria-expanded="false"
+                      aria-controls="faq4"
+                    >
+                      Qual o prazo de entrega dos produtos?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      O prazo varia conforme sua localização: até 24h para
+                      região metropolitana, 48h para interior e até 72h para
+                      regiões mais distantes. Você receberá um código de
+                      rastreamento por e-mail após a confirmação do pedido.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq5"
+                      aria-expanded="false"
+                      aria-controls="faq5"
+                    >
+                      Posso trocar ou devolver produtos?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq5"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Sim! Você tem até 7 dias para trocar ou devolver produtos,
+                      desde que estejam na embalagem original e sem uso. Entre
+                      em contato conosco para mais informações sobre o processo
+                      de devolução.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq6"
+                      aria-expanded="false"
+                      aria-controls="faq6"
+                    >
+                      Meu pet tem alergias, vocês conseguem trabalhar com isso?
+                    </button>
+                  </h3>
+                  <div
+                    id="faq6"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body">
+                      Sim, nós podemos! Ao fazer o cadastro, indique as alergias
+                      e sensibilidades do seu pet no campo de observações.
+                      Recomendamos também entrar em contato via WhatsApp para
+                      confirmar com nosso veterinário os produtos mais
+                      adequados.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="alert alert-info mt-5" role="alert">
+                <h4 class="alert-heading h5">
+                  <i class="fas fa-headset" aria-hidden="true"></i> Suporte ao
+                  Cliente
+                </h4>
+                <p class="mb-2">
+                  <strong>WhatsApp:</strong>
+                  <a
+                    href="https://wa.me/5551999999999"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Falar conosco no WhatsApp"
+                    >(51) 99999-9999</a
+                  >
+                </p>
+                <p class="mb-2">
+                  <strong>E-mail:</strong>
+                  <a href="mailto:contato@petshoponline.com.br"
+                    >contato@petshoponline.com.br</a
+                  >
+                </p>
+                <p class="mb-0">
+                  <strong>Horário:</strong> Segunda a Sábado, 8h às 18h
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </main>
+    <footer class="bg-dark text-white py-5 mt-5" role="contentinfo">
+      <div class="container">
+        <div class="row g-4 mb-4">
+          <div class="col-md-4">
+            <h4 class="h5">
+              <i class="fas fa-paw" aria-hidden="true"></i> PetShop Online
+            </h4>
+            <p>Cuidando do seu pet com amor e dedicação desde 2020.</p>
+            <nav aria-label="Redes sociais">
+              <div class="d-flex gap-3">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visite nossa página no Facebook"
+                >
+                  <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visite nosso perfil no Instagram"
+                >
+                  <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://wa.me/5551999999999"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Entre em contato conosco no WhatsApp"
+                >
+                  <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
+                </a>
+              </div>
+            </nav>
+          </div>
+
+          <div class="col-md-4">
+            <h4 class="h5">Links Úteis</h4>
+            <nav aria-label="Links do rodapé">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#home" class="text-white-50 text-decoration-none"
+                    >Início</a
+                  >
+                </li>
+                <li>
+                  <a href="#produtos" class="text-white-50 text-decoration-none"
+                    >Produtos</a
+                  >
+                </li>
+                <li>
+                  <a href="#servicos" class="text-white-50 text-decoration-none"
+                    >Serviços</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#agendamento"
+                    class="text-white-50 text-decoration-none"
+                    >Agendamento</a
+                  >
+                </li>
+                <li>
+                  <a href="#cadastro" class="text-white-50 text-decoration-none"
+                    >Cadastro</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-md-4">
+            <h4 class="h5">Contato</h4>
+            <address>
+              <p class="mb-2">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                Gravataí, Rio Grande do Sul, BR
+              </p>
+              <p class="mb-2">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <a
+                  href="mailto:contato@petshoponline.com.br"
+                  class="text-white-50 text-decoration-none"
+                >
+                  contato@petshoponline.com.br
+                </a>
+              </p>
+              <p class="mb-0">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <a
+                  href="tel:+5551999999999"
+                  class="text-white-50 text-decoration-none"
+                >
+                  (51) 99999-9999
+                </a>
+              </p>
+            </address>
+          </div>
+        </div>
+
+        <hr class="bg-white-50" />
+
+        <div class="row">
+          <div class="col-md-6">
+            <p class="text-white-50 mb-0">
+              © 2025 PetShop Online. Todos os direitos reservados.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="text-white-50 mb-0">
+              CNPJ: 00.000.000/0001-00 |
+              <a href="#" class="text-white-50 text-decoration-none"
+                >Política de Privacidade</a
+              >
+              |
+              <a href="#" class="text-white-50 text-decoration-none"
+                >Termos de Serviço</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="form-handler.js"></script>
+  </body>
 </html>
